@@ -1,9 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+'background': 'var(--background)',
+'cardTheme': 'var(--card-background)',
+'color': 'var(--t-color-theme)',
+'inputTheme': 'var(--input-theme)',
+'colorInput': 'var(--t-input-color-theme)',
+*/
+:root {
+  --background: #d6d2d2;
+  --background-secondary: #dad1d1;
+  --card-background: #fafafa;
+  --t-color-theme: #464343;
+  --t-color-product: rgb(129, 224, 129);
+  --input-theme: #fafafa;
+  --t-input-color-theme: #222121;
+  --bar-background: #e2dede;
+  --nav-background: #fafafa;
+  --t-label-color: #c4b6b6;
+}
+[data-theme='dark'] {
+  --background: #272525;
+  --background-secondary: #201e1e;
+  --card-background: #3a3636;
+  --t-color-theme: #f1eded;
+  --t-color-product: rgb(147 197 253);
+  --input-theme: #3a3838; 
+  --t-input-color-theme: #fafafa;
+  --bar-background: #1d1c1c;
+  --nav-background: #272525;
+  --t-label-color: #312e2e;
+}
+
+
+@layer components {
+  .headerIcon {
+    @apply h-7 w-7 hover:scale-125 transition-all duration-200 ease-out;
+  }
+  .sidebarComponent {
+    @apply text-sm flex items-center justify-between px-3 py-2 cursor-pointer rounded-lg hover:bg-gray-700 hover:text-white transition-all duration-100 ease-linear;
+  }
+  .miniIcon {
+    @apply h-6 w-6 hover:scale-110 transition-all duration-200 ease-out;
+  
+  }
+
+  /* admin */
+  .adminCard {
+    @apply relative bg-cardTheme rounded-[20px] p-3 flex flex-col space-y-4 justify-center items-center h-[250px];
+  }
+  .adminCardTitle {
+    @apply absolute -top-2 -left-2 bg-themeSecondary pl-4 pr-8 py-4 cursor-default rounded-tl-[20px] hover:scale-95 transition-all duration-150 ease-in flex items-center justify-center;
+  }
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 
 a {
@@ -13,4 +74,19 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+
+.swiper {
+  height: 300px;
+  width: 600px; 
+}
+.swiperSlide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
 }
