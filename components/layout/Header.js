@@ -14,7 +14,7 @@ import { useSession } from 'next-auth/react'
 function Header() {
   const {data: session } = useSession()
   return (
-    <div className=' bg-white sticky z-50 top-0 mobile:shadow-md laptop:shadow-md p-3 pl-5 flex items-center justify-center'>
+    <div className=' bg-cardTheme sticky z-50 top-0 mobile:shadow-md laptop:shadow-md p-3 pl-5 flex items-center justify-center'>
         <div className='flex justify-between items-center h-full max-h-[100px] w-full max-w-screen laptop:max-w-6xl'>
             {/* icon */}
             <div className='inline-flex w-12 h-12 cursor-pointer hover:scale-125 transition-all duration-300'>

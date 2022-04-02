@@ -63,7 +63,7 @@ function ProductOverviews() {
       autoplay={{ delay: 5000, disableOnInteraction: false }}
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log('slide change')}
-      className='mySwiper h-full w-full'
+      className='mySwiperHome h-full w-full'
     >
         {DUMMY_DATA.map((overview) => (
           <>
